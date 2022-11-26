@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Card, { CardVariant } from "./components/Card";
+import EventsExample from "./components/EventsExample";
 import List from "./components/List";
 import TodoItem from "./components/TodoItem";
 import UserItem from "./components/UserItem";
 import { ITodo, IUser } from "./types/types";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -31,6 +33,7 @@ function App() {
 
   return (
     <div>
+      <EventsExample />
       <Card
         onClick={(num) => console.log("click", num)}
         height="200px"
